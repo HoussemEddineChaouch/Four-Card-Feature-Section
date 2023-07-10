@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --Red : hsl(0, 78%, 62%);
+    --Cyan : hsl(180, 62%, 55%) ;
+    --Orange : hsl(34, 97%, 64%) ;
+    --Blue : hsl(212, 86%, 64%) ;
+    
+    --Very-Dark-Blue : hsl(234, 12%, 34%) ;
+    --Grayish-Blue : hsl(229, 6%, 66%) ;
+    --Very-Light-Gray: hsl(0, 0%, 98%) ;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--Very-Light-Gray);
+}
+.container {
+    margin: auto;
+    padding-left: 15px ;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+.feature-section {
+    padding: 50px 0;
+}
+.info {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.info h1 {
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+.info h2 {
+    font-size: 30px;
+    margin-bottom:15px;
+}
+.info p {
+    max-width: 500px;
+    line-height: 1.7;
+    font-size: 14px;
+    margin: 0 auto;
+    color: var(--Grayish-Blue);
+
+}
+.cards {
+   display: grid;
+   grid-template-columns: repeat( 3 , 1fr);
+   gap: 20px;
+}
+.cards > div {
+    background-color: white;
+    box-shadow: 0 0 15px hsl(229, 6%, 66% , 50%);
+    border-radius: 8px;
+    padding: 30px;
+    border-top-width: 4px;
+    border-top-style: solid;
+}
+.cards > div h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.cards > div p {
+    color: var(--Grayish-Blue);
+    margin-bottom: 30px;
+}
+.cards > div .image {
+  display: flex;
+  justify-content: end ;
+}
+.four {
+    grid-column: 2 / 3;
+}
+.one , .three {
+    position: relative;
+    top: 50%;
+}
+.one {
+    border-top-color: var(--Cyan);
+}
+.two {
+    border-top-color: var(--Red);
+}
+.three {
+    border-top-color: var(--Blue) ;
+}
+.four {
+    border-top-color: var(--Orange) ;
+}
+@media ( max-width : 768px ) {
+    .info h1 , .info h2 {
+        font-size: 23px;
+    }
+    .info p {
+        width: 300px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards > div {
+      width: 90vw;
+    }
+    .one , .three {
+        position: relative;
+        top:0;
+    }
+}
